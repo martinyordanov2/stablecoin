@@ -1,0 +1,184 @@
+Compiling 27 files with Solc 0.8.29
+Solc 0.8.29 finished in 1.37s
+Compiler run successful!
+Analysing contracts...
+Running tests...
+
+Ran 4 tests for test/DecentralizedStableCoin.t.sol:DecentralizedStableCoinTest
+[PASS] testBurnAmountIsZero() (gas: 62131)
+[PASS] testMintToAddressZero() (gas: 13553)
+[PASS] testMintValue() (gas: 60031)
+[PASS] testMintZeroValue() (gas: 13551)
+Suite result: ok. 4 passed; 0 failed; 0 skipped; finished in 951.08µs (571.29µs CPU time)
+
+Ran 1 test suite in 5.93ms (951.08µs CPU time): 4 tests passed, 0 failed, 0 skipped (4 total tests)
+Uncovered for src/DecentralizedStableCoin.sol:
+- Line (location: source ID 25, lines 27..28, bytes 937..954, hits: 0)
+- Statement (location: source ID 25, lines 27..28, bytes 937..954, hits: 0)
+- Branch (branch: 1, path: 0) (location: source ID 25, lines 27..30, bytes 956..1039, hits: 0)
+- Line (location: source ID 25, lines 28..29, bytes 970..1028, hits: 0)
+- Statement (location: source ID 25, lines 28..29, bytes 970..1028, hits: 0)
+- Line (location: source ID 25, lines 31..32, bytes 1049..1068, hits: 0)
+- Statement (location: source ID 25, lines 31..32, bytes 1049..1068, hits: 0)
+
+Anchors for Contract "StdCheats" (solc 0.8.29, source ID 3):
+
+Anchors for Contract "ScriptBase" (solc 0.8.29, source ID 0):
+
+Anchors for Contract "console" (solc 0.8.29, source ID 15):
+
+Anchors for Contract "StdConstants" (solc 0.8.29, source ID 4):
+
+Anchors for Contract "StdStyle" (solc 0.8.29, source ID 10):
+
+Anchors for Contract "IERC20Metadata" (solc 0.8.29, source ID 23):
+
+Anchors for Contract "TestBase" (solc 0.8.29, source ID 0):
+
+Anchors for Contract "stdToml" (solc 0.8.29, source ID 11):
+
+Anchors for Contract "StdAssertions" (solc 0.8.29, source ID 1):
+
+Anchors for Contract "stdMath" (solc 0.8.29, source ID 8):
+
+Anchors for Contract "StdCheatsSafe" (solc 0.8.29, source ID 3):
+
+Anchors for Contract "Context" (solc 0.8.29, source ID 24):
+
+Anchors for Contract "DecentralizedStableCoinTest" (solc 0.8.29, source ID 26):
+
+Anchors for Contract "stdStorageSafe" (solc 0.8.29, source ID 9):
+
+Anchors for Contract "IERC20" (solc 0.8.29, source ID 21):
+
+Anchors for Contract "ERC20" (solc 0.8.29, source ID 20):
+
+Anchors for Contract "stdJson" (solc 0.8.29, source ID 7):
+
+Anchors for Contract "stdStorage" (solc 0.8.29, source ID 9):
+
+Anchors for Contract "VmSafe" (solc 0.8.29, source ID 14):
+
+Anchors for Contract "StdChains" (solc 0.8.29, source ID 2):
+
+Anchors for Contract "DecentralizedStableCoin" (solc 0.8.29, source ID 25):
+- IC 551 -> Item 0
+- Creation code
+  - Refers to item: Line (location: source ID 25, lines 22..33, bytes 713..1075, hits: 1)
+- IC 551 -> Item 1
+- Creation code
+  - Refers to item: Function "burn" (location: source ID 25, lines 22..33, bytes 713..1075, hits: 1)
+- IC 1388 -> Item 2
+- Creation code
+  - Refers to item: Line (location: source ID 25, lines 23..24, bytes 780..819, hits: 1)
+- IC 1388 -> Item 3
+- Creation code
+  - Refers to item: Statement (location: source ID 25, lines 23..24, bytes 780..819, hits: 1)
+- IC 1389 -> Item 4
+- Creation code
+  - Refers to item: Statement (location: source ID 25, lines 23..24, bytes 798..819, hits: 1)
+- IC 1400 -> Item 5
+- Creation code
+  - Refers to item: Line (location: source ID 25, lines 24..25, bytes 833..845, hits: 1)
+- IC 1400 -> Item 6
+- Creation code
+  - Refers to item: Statement (location: source ID 25, lines 24..25, bytes 833..845, hits: 1)
+- IC 1407 -> Item 7
+- Creation code
+  - Refers to item: Branch (branch: 0, path: 0) (location: source ID 25, lines 24..27, bytes 847..924, hits: 1)
+- IC 1407 -> Item 8
+- Creation code
+  - Refers to item: Line (location: source ID 25, lines 25..26, bytes 861..913, hits: 1)
+- IC 1407 -> Item 9
+- Creation code
+  - Refers to item: Statement (location: source ID 25, lines 25..26, bytes 861..913, hits: 1)
+- IC 1457 -> Item 10
+- Creation code
+  - Refers to item: Line (location: source ID 25, lines 27..28, bytes 937..954, hits: 0)
+- IC 1457 -> Item 11
+- Creation code
+  - Refers to item: Statement (location: source ID 25, lines 27..28, bytes 937..954, hits: 0)
+- IC 1465 -> Item 12
+- Creation code
+  - Refers to item: Branch (branch: 1, path: 0) (location: source ID 25, lines 27..30, bytes 956..1039, hits: 0)
+- IC 1465 -> Item 13
+- Creation code
+  - Refers to item: Line (location: source ID 25, lines 28..29, bytes 970..1028, hits: 0)
+- IC 1465 -> Item 14
+- Creation code
+  - Refers to item: Statement (location: source ID 25, lines 28..29, bytes 970..1028, hits: 0)
+- IC 1515 -> Item 15
+- Creation code
+  - Refers to item: Line (location: source ID 25, lines 31..32, bytes 1049..1068, hits: 0)
+- IC 1515 -> Item 16
+- Creation code
+  - Refers to item: Statement (location: source ID 25, lines 31..32, bytes 1049..1068, hits: 0)
+- IC 503 -> Item 17
+- Creation code
+  - Refers to item: Line (location: source ID 25, lines 34..44, bytes 1081..1430, hits: 4)
+- IC 503 -> Item 18
+- Creation code
+  - Refers to item: Function "mint" (location: source ID 25, lines 34..44, bytes 1081..1430, hits: 4)
+- IC 1202 -> Item 19
+- Creation code
+  - Refers to item: Line (location: source ID 25, lines 35..36, bytes 1170..1187, hits: 4)
+- IC 1202 -> Item 20
+- Creation code
+  - Refers to item: Statement (location: source ID 25, lines 35..36, bytes 1170..1187, hits: 4)
+- IC 1253 -> Item 21
+- Creation code
+  - Refers to item: Branch (branch: 2, path: 0) (location: source ID 25, lines 35..38, bytes 1188..1272, hits: 1)
+- IC 1253 -> Item 22
+- Creation code
+  - Refers to item: Line (location: source ID 25, lines 36..37, bytes 1202..1261, hits: 1)
+- IC 1253 -> Item 23
+- Creation code
+  - Refers to item: Statement (location: source ID 25, lines 36..37, bytes 1202..1261, hits: 1)
+- IC 1303 -> Item 24
+- Creation code
+  - Refers to item: Line (location: source ID 25, lines 38..39, bytes 1284..1296, hits: 3)
+- IC 1303 -> Item 25
+- Creation code
+  - Refers to item: Statement (location: source ID 25, lines 38..39, bytes 1284..1296, hits: 3)
+- IC 1310 -> Item 26
+- Creation code
+  - Refers to item: Branch (branch: 3, path: 0) (location: source ID 25, lines 38..41, bytes 1297..1374, hits: 1)
+- IC 1310 -> Item 27
+- Creation code
+  - Refers to item: Line (location: source ID 25, lines 39..40, bytes 1311..1363, hits: 1)
+- IC 1310 -> Item 28
+- Creation code
+  - Refers to item: Statement (location: source ID 25, lines 39..40, bytes 1311..1363, hits: 1)
+- IC 1360 -> Item 29
+- Creation code
+  - Refers to item: Line (location: source ID 25, lines 41..42, bytes 1383..1402, hits: 2)
+- IC 1360 -> Item 30
+- Creation code
+  - Refers to item: Statement (location: source ID 25, lines 41..42, bytes 1383..1402, hits: 2)
+- IC 1370 -> Item 31
+- Creation code
+  - Refers to item: Line (location: source ID 25, lines 42..43, bytes 1412..1423, hits: 2)
+- IC 1370 -> Item 32
+- Creation code
+  - Refers to item: Statement (location: source ID 25, lines 42..43, bytes 1412..1423, hits: 2)
+
+Anchors for Contract "ERC20Burnable" (solc 0.8.29, source ID 22):
+
+Anchors for Contract "Ownable" (solc 0.8.29, source ID 19):
+
+Anchors for Contract "safeconsole" (solc 0.8.29, source ID 18):
+
+Anchors for Contract "stdError" (solc 0.8.29, source ID 5):
+
+Anchors for Contract "Vm" (solc 0.8.29, source ID 14):
+
+Anchors for Contract "IMulticall3" (solc 0.8.29, source ID 17):
+
+Anchors for Contract "StdInvariant" (solc 0.8.29, source ID 6):
+
+Anchors for Contract "CommonBase" (solc 0.8.29, source ID 0):
+
+Anchors for Contract "Test" (solc 0.8.29, source ID 13):
+
+Anchors for Contract "StdUtils" (solc 0.8.29, source ID 12):
+
