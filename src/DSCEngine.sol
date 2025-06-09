@@ -187,7 +187,7 @@ contract DSCEngine is ReentrancyGuard {
 
     function getHealthFactor() external view {}
 
-    function _getAccountInformation(address user)
+    function _getAccountInformation(address user) ////THIS is PRIVATE 
         private
         view
         returns (uint256 totalDscMinted, uint256 collateralValueInUsd)
@@ -238,13 +238,21 @@ contract DSCEngine is ReentrancyGuard {
         i_dsc.burn(amountDscToBurn);
     }
 
+    function getCollateralBalanceOfUser(address user, address token) external view returns(uint256){
+        return s_collateralDeposited[user][token];
+    }
+
     function getAccountCollateralValue(address user) public view returns (uint256 totalCollateralValueInUsd) {
         for (uint256 i = 0; i < s_collateralTokens.length; i++) {
             address token = s_collateralTokens[i];
             uint256 amount = s_collateralDeposited[user][token];
             totalCollateralValueInUsd += getUsdValue(token, amount);
         }
-        return totalCollateralValueInUsd;
+        return totalCollateralValueInUsd;   
+    }
+
+    function getAccountInfo(address user) external view returns (uint256 totalDscMinted, uint256 collateralValueInUsd){
+        (totalDscMinted, collateralValueInUsd) = _getAccountInformation(user);
     }
 
     //Converts a USD amount → token amount
