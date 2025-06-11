@@ -6,3 +6,5 @@
 	url = https://github.com/openzeppelin/openzeppelin-contracts
 [submodule "lib/chainlink-brownie-contracts"]
 	path = lib/chainlink-brownie-contracts
+[submodule "lib/foundry-devops"]
+	path = lib/foundry-devops
