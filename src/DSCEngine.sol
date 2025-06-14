@@ -307,4 +307,8 @@ contract DSCEngine is ReentrancyGuard {
     function getCollateralTokenPriceFeed(address token) external view returns (address) {
         return s_priceFeeds[token];
     }
+
+    function getMinHealthFactor() external pure returns(uint256){
+        return MIN_HEALTH_FACTOR;
+    }
 }

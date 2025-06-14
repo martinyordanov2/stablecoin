@@ -20,7 +20,6 @@ contract Invariants is StdInvariant, Test {
     Handler handler;
     address public weth;
     address public wbtc;
-    
 
     function setUp() external {
         deployer = new DeployDSC();
@@ -45,6 +44,15 @@ contract Invariants is StdInvariant, Test {
         console2.log("totalSupply:", totalSupply);
 
         assert(wethValue + btcValue >= totalSupply);
+    }
+
+    function invariant_userCantCreateStablecoinWithPoorHealthFactor() public view{
+        for (uint256 i = 0; i < handler.getUsersThatMintedLength(); i++) {
+        address user = handler.usersThatMinted(i);
+        uint256 hf = engine.getHealthFactor(user);
+
+        assert(hf >= engine.getMinHealthFactor());
+    }
     }
 
     function invariant_gettersShouldNotRevert() public view {

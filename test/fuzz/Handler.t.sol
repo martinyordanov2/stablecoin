@@ -19,6 +19,7 @@ contract Handler is Test {
     uint256 public timesMintIsCalled;
     uint256 MAX_DEPOSIT_SIZE = type(uint96).max;
     address[] public usersWithCollateralDeposited;
+    address[] public usersThatMinted;
 
     constructor(DSCEngine _dscEngine, DecentralizedStableCoin _dsc) {
         engine = _dscEngine;
@@ -59,7 +60,7 @@ contract Handler is Test {
 
     function mintDsc(uint256 amountDscToMint, uint256 addressSeed) public {
         //When using invariants we are going to use random addresses. We need to know which user's address has deposited collateral so ONLY he can be allowed to mint. Therefore we rule out the msg.sender.
-        if(usersWithCollateralDeposited.length == 0){
+        if (usersWithCollateralDeposited.length == 0) {
             return;
         }
         address sender = usersWithCollateralDeposited[addressSeed % usersWithCollateralDeposited.length];
@@ -73,7 +74,7 @@ contract Handler is Test {
             return;
         }
         amountDscToMint = bound(amountDscToMint, 0, uint256(maxDscToMint));
-        
+
         if (amountDscToMint == 0) {
             //this
             return;
@@ -82,10 +83,12 @@ contract Handler is Test {
         vm.startPrank(sender);
         engine.mintDsc(amountDscToMint);
         vm.stopPrank();
+
+        usersThatMinted.push(sender);
         timesMintIsCalled++;
     }
 
-    // this breaks the invariant  
+    // this breaks the invariant
     // function updateCollateralPrice(uint96 newPrice) public{ //this test destroys the value of the collateral
     //     int256 newPriceInt = int256(uint256(newPrice));
     //     ethUsdPriceFeed.updateAnswer(newPriceInt);
@@ -117,5 +120,9 @@ contract Handler is Test {
             return weth;
         }
         return wbtc;
+    }
+
+    function getUsersThatMintedLength() external view returns (uint256) {
+        return usersThatMinted.length;
     }
 }
